@@ -1,0 +1,97 @@
+nav ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+nav{
+    padding: 20px 80px;
+    border-bottom: 1px solid lightgrey;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: white;
+}
+
+nav ul {
+    padding: 0px;
+    list-style: none;
+    margin: 0px;
+}
+nav ul li {
+    float: left;
+}
+nav ul li:not(:first-child) > a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: grey;
+    transition: all .2s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+nav ul li.active > a {
+    color: dodgerblue;
+    border-bottom: 2px solid dodgerblue;
+}
+nav ul li:not(:first-child):hover > a:not(.active) {
+    color: #3822C2;
+    border-bottom: 2px solid #3822C2;
+}
+
+.right{
+    float: right;
+}
+nav form select {
+    padding: 10px 10px;
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 15px;
+    cursor: pointer;
+    border: 1px solid #3822C2;
+    color: #3822C2;
+}
+
+form input[type="search"] {
+    margin-top: 5px;
+    padding: 10px 10px;
+    width: 250px;
+    transition: width .5s ease-in-out;
+}
+
+form input[type="search"]:focus{
+    outline: none;
+    width: 400px;
+}
+form i{
+    margin-top: 6px;
+    padding: 8px 10px;
+    margin-left: -45px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    color: gray;
+    background: white;
+}
+
+/* main container */
+.container {
+    margin-top: 40px;
+    padding: 20px 100px;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.col-6 {
+    float: left;
+    padding: 20px;
+    width: 50%;
+}
+.col-6 img {
+    width: 100%;
+}
+#start {
+    text-decoration: none;
+    background: #6A4DFF;
+    color: white;
+    padding: 12px 18px;   
+}

@@ -1,0 +1,256 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    background: #FAFAFA;
+}
+.padd-80 {
+    padding: 0px 100px;
+}
+#cart{
+    color: black;
+}
+
+/* Users not LENDERs signup and login form */
+.signup {
+    width: 450px;
+    margin: 0px auto;
+    padding: 0px 20px;
+    border-radius: 5px;
+}
+.signup form {
+    margin-top: 30px;
+}
+.signup form div{
+    position: relative;
+    margin-bottom: 25px;
+}
+.signup form div input:not([type="submit"]) {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid lightgrey;
+    border-radius: 4px;
+    font-size: 16px;
+    color: grey;
+}
+.signup form div label {
+    position: absolute;
+    font-size: 16px;
+    left: 10px;
+    background: #FAFAFA;
+    top: 12px;
+    padding: 0px 5px;
+    transition: all .2s ease;
+}
+.signup form div input:not([type="submit"]):focus{
+    outline: none;
+}
+
+.signup form div input:not([type="submit"]):focus + label, .signup form div input:not([type="submit"]):valid + label {
+    transform: translateY(-19px);
+    font-size: 13px;
+    color: #6A4DFF;
+}
+
+#p-display{
+    background-position: center 0px;
+    background-size: cover;
+}
+.signup form div input[type="submit"] {
+    padding: 12px 35px;
+    font-size: 15px;
+    border-radius: 4px;
+    background: #6A4DFF;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+.signup form div input[type="submit"]:hover{
+    background: rgb(72, 47, 196);
+}
+.fixit::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.dropdown{
+    display: inline-block;
+    cursor: pointer;
+}
+.content{
+    position: absolute;
+    z-index: 30;
+    background: white;
+    border: 1px solid lightgrey;
+    width: 170px;
+    top: 75px;
+    transition: all .2s ease;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(218,218,218,.7);
+    display: none;
+    right: 50px;
+}
+.content::after{
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 55px;
+    border: 1px solid lightgrey;
+    transform: rotateZ(45deg) translate(0, -60%);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+.content a{
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    color: grey;
+}
+.content a:not(#logout):hover {
+    color: dodgerblue;
+}
+.content a#logout:hover{
+    color: red;
+}
+.dropdown:hover .content {
+    display: block;
+}
+/* adding product page design */
+.product-1{
+    position: relative;
+    width: 100%;
+}
+.product div {
+    position: relative;
+    margin-bottom: 20px;
+}
+.product-1 > div > input:not([type="submit"]) {
+    width: 100%;
+    padding: 15px 15px;
+    border-radius: 5px;
+    background: rgba(218,218,218,.4);
+    border:none;
+    font-size: 15px;
+}
+.product-1 > div > input:not([type="submit"]):focus {
+    outline: none;
+}
+.product-1 > div > textarea {
+    width: 100%;
+    background: rgba(218,218,218,.4);
+    border-radius: 5px;
+    padding: 15px;
+    resize: none;
+    border: none;
+}
+.product-1 div label {
+    margin-bottom: 20px;
+    color: grey;
+    display: block;
+}
+.product-1 div select {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: rgba(218,218,218,.4);
+    color: grey;
+    font-size: 14px;
+}
+.success-addition {
+    width: 500px;
+    padding: 20px;
+    background: lightgreen;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    transform-origin: center;
+    animation: product-anim .5s ease-in-out forwards;
+    animation-iteration-count: 1;
+}
+@keyframes product-anim {
+    from {
+        transform: translate(-50%,-50%) scale(0) ;
+    }
+    to {
+        transform: translate(-50%,-50%) scale(1);
+    }
+}
+@keyframes hide-product {
+    from{
+        display: block;
+    }
+    to{
+        display: none;
+    }
+}
+
+/* adjusting the products */
+.lender-product-display {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(218,218,218,1);
+    transition: transform .2s ease-in;
+    margin-bottom: 20px;
+    background: white;
+}
+.lender-product-display:hover{
+    transform: scale(1.01);
+}
+.product-image-display {
+    width: 100%;
+    min-height: 250px;
+    border-radius: 5px;
+}
+.remove-product button{
+    width: 100%;
+    background: #BA1E2B;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* password reset overlay */
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background: rgb(0, 0, 0,.5);
+    top: 0;
+    left: 0;
+    animation: overlay .3s forwards ease-in-out 1;
+}
+@keyframes overlay {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.password-overlay {
+    min-height: 200px;
+    width: 450px;
+    padding: 35px 20px 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid rgba(218,218,218,1);
+    z-index: 33 ;
+}
