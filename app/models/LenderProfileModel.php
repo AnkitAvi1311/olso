@@ -70,7 +70,7 @@ class LenderProfileModel extends Model {
         );
         $stmt = $this->__select($sql, $params);
         $row = $stmt->fetch();
-        $rating = $row['average_rating'];
+        $rating = round($row['average_rating'], 2);
         return $rating;
     }
 
