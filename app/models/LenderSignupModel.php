@@ -58,6 +58,8 @@ class LenderSignupModel extends Model {
         if($this->error === true && $this->sign_status === false) {
             return $this->err_info;
         }else{
+            $mail = new Mailer();
+            $mail->signupMail($this->info['email'], $this->info['fname']);
             return false;
         }
     }

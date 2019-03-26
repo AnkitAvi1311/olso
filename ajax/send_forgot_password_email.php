@@ -47,9 +47,6 @@ if($_GET['email']) {
 
         // More headers
         $headers .= 'From: OLSO' . "\r\n";
-        $headers .= 'Cc: myboss@example.com' . "\r\n";
-
-
         mail($to, $subject, $message, $headers);
     }else{
         echo "Mail sending failed";
